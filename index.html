@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="background_styles.css">
+      <link rel="stylesheet" href="styles.css">
+      <title>RMP FARMS</title>
+      <link rel="shortcut icon" type="image/ico" href="images/RMP LOGO.png">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://use.typekit.net/inx1zhs.css">
+
+      
+    </head>
+    <body>
+      
+      <div class = "sec1" >
+        <div class="background_video"> 
+            <video autoplay loop muted>
+              <source src="images/background_video.mp4" type="video/mp4" />
+            </video>
+        </div>
+        <div class="pg1tit">
+            RMP FARMS
+        </div>
+        <div class="pg1tit1">
+            Heritage of excellence since 1964
+        </div>
+    
+      </div> 
+
+        
+      <header class="header header-scrolled">
+          
+        <a href="index.html"><img src="images/Frame 2.png" class="logo"></a>
+        <button class="openbtn" onclick="openNav()">Menu</button>  
+          
+          
+      </header>
+      <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="#sectionpra">Our Practice</a>
+        <a href="whatwedo.html">Operations</a>
+        <a href="contractfarming.html">Contract Farming</a>
+        <a href="contactus.html">Contact Us</a>
+      </div>
+      
+      <section>
+        <div class="container ">
+          <div class="title" id = "sectionpra">
+            <p><br>Our Practice</p>
+          </div>
+          <div class="content">
+            
+            <h3><br>we are dedicated to upholding the highest standards of sustainability, innovation, and quality, ensuring that every step of our operations, from breeding to production, reflects our commitment to excellence and care for both our animals and the environment.</h3>
+          </div>
+      </div>
+      </section>
+
+   
+
+      <section>
+        <div class="container1 ">
+          <img src = "images/Frame 3.png" class="whatwedoimg">
+        </div>
+        <div class = "container2 ">
+          <div class="text-section">
+            <p>At RMP Farms, we take pride in offering a diverse range of premium products and services designed to meet the highest standards of quality and excellence. From our meticulously hatched broiler chicks to our carefully formulated feed, each product is crafted with precision and care. Our comprehensive services, including contract farming, feed production, and broiler farming, are tailored to support our partners and customers at every stage. Whether you're a trader looking for superior broiler hens or a farmer in need of high-quality feed, RMP Farms is your trusted partner for all your poultry needs.</p>
+          </div>
+          <div class="text-section">
+            <p>Discover the difference our commitment to excellence makes in every product and service we provide. Whether you're a trader looking for superior broiler hens or a farmer in need of high-quality feed, RMP Farms is your trusted partner for all your poultry needs. Discover the difference our commitment to excellence makes in every product and service we provide.</p>
+            <div class="buton">
+              <a href="whatwedo.html" class="cta-button">Explore What We Offer</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class = "contractfarm" >
+          <a href="contractfarming.html"><img src="images/Frame 5.png" class="contractfarmimg"></a>
+        </div>
+      </section>
+
+      <section>
+        <div class = "contactcontent ">
+          <p>We'd love to hear from you! Whether you have questions about our products, services, or any other inquiries, our team is here to help.</p>
+          <a href="contactus.html" class="cta-button">Contact Us</a>
+        </div>
+      </section>
+
+      <section>
+        <div class = "foter ">
+          <br>
+          <p>RMP Farms 2024</p>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <a href="mailto:rgragulraj@gmail.com"><p>Website By Ragul Raj</p></a>
+          <br>
+        </div>
+      </section>
+
+
+      <script type="text/javascript">
+        window.addEventListener('scroll',reveal);
+
+        function reveal(){
+          var reveals = document.querySelectorAll('.reveal');
+
+          for(var i = 0; i < reveals.length; i++){
+            var windowheight = window.innerHeight;
+            var revealtop = reveals[i].getBoundingClientRect().top;
+            var revealpoint = 150;
+
+            if(revealtop < windowheight - revealpoint){
+              reveals[i].classList.add('active');
+            }
+          }
+        }
+      </script>
+  
+      
+      <script>
+        function openNav() {
+          document.getElementById("mySidebar").style.width = "250px";
+          document.getElementById("main").style.marginRight = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidebar").style.width = "0";
+          document.getElementById("main").style.marginRight= "0";
+        }
+      </script>
+
+    </body>
+</html>

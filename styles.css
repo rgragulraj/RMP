@@ -1,0 +1,583 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    justify-content: center;
+    
+    
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*MR DAFOE REGULAR*/
+/*font-family: "acumin-pro", sans-serif;
+font-weight: 400;
+font-style: normal;*/
+.mr-dafoe-regular {
+    font-family: "Mr Dafoe", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+    display: none;
+}
+
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+.example {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+@font-face {
+    font-family: Futura;
+    src: url(fonts/FuturaMediumBT.ttf);
+}
+
+
+
+.background_video{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.background_video video{
+    z-index: -1;
+    position: absolute;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pg1tit{
+    font-family: "Tinos", serif;
+    font-weight: 700;
+    font-style: normal;
+    color: white;
+    font-size: 7vw;
+    position: absolute;
+    text-shadow: 2px 2px 2px black;
+    justify-content: center;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+@media (max-width: 768px) {
+    .pg1tit {
+        font-size: 15vw;
+        text-align: center;
+        line-height: 0.75em;
+    }
+}
+
+
+.pg1tit1{
+    font-family: "Tinos", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 2vw;
+    position: absolute;
+    text-shadow: 2px 2px 2px black;
+    justify-content: center;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+@media (max-width: 768px) {
+    .pg1tit1 {
+        padding-top: 10px;
+        font-size: 5vw;
+        text-align: center;
+        line-height: 0.75em;
+    }
+}
+
+
+.container2{
+    display: flex;
+    justify-content:center;
+}
+
+.text-section {
+    flex: 1 1 45%;
+    font-size: 1em;
+    line-height: 1.6;
+    margin: 0;
+    text-align: justify;
+    max-width: 650px;
+    padding:10px;
+    font-family: poppins;
+    font-size: 20px;
+    font-weight: 150;
+    
+}
+
+@media (max-width: 768px) {
+    .container2 {
+        display: contents;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .text-section {
+        font-size: 2.5vw;
+        line-height: 1.6;
+        margin: 10px;
+        max-width: 650px;
+        font-family: poppins;
+        font-weight: 150;
+    }
+}
+
+.buton{
+    text-align: center;
+}
+
+.cta-button {
+    display: inline-block;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 20px 25px;
+    border: 2px solid #000;
+    color: #000;
+    text-decoration: none;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+
+}
+
+@media (max-width: 768px) {
+    .cta-button {
+        display: inline-block;
+        border-radius: 20px;
+        margin-top: 20px;
+        padding: 15px 20px;
+        border: 2px solid #000;
+        color: #000;
+        text-decoration: none;
+        font-size: 1.5em;
+        text-transform: uppercase;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+    }
+}
+
+
+.whatwedoimg{
+    width: 100%;
+    height: auto;
+    max-width:1500px;
+}
+.contractfarmimg{
+    width: 100%;
+    height: auto;
+    max-width:1250px;
+}
+
+.contractfarm{
+    margin: 5%;
+    text-align: center;
+}
+
+.cta-button:hover {
+    background-color: #000;
+    color: #fff;
+}
+.logo{
+    
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: .2%;
+    left: .2%;
+    width: 100px;
+    
+}
+
+
+@media (max-width: 768px) {
+    .logo {
+        width: 20%;
+    }
+}
+
+
+.container {
+    display: flex;
+    padding: 20px;
+
+}
+
+
+
+.title {
+    flex: 1;
+    margin-right: 20px;
+    display: flex;
+    font-family: poppins;
+    font-size: 2.1vw;
+    font-weight: 150;
+    margin-left: 50px;
+    
+}
+
+@media (max-width: 768px) {
+    .title {
+        display: none;
+    }
+}
+
+.content {
+    flex: 2;
+    display: flex;
+    font-family: poppins;
+    font-size: 1.5vw;
+    font-weight: 200;
+    margin-right: 50px;
+    padding-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex: 2;
+        display: contents;
+        text-align: center;
+        font-family: poppins;
+        font-size: 3vw;
+        font-weight: 200;
+        
+    }
+}
+
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+    
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+section .containter{
+    margin: 0px;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    color: #f1f1f1;
+    
+    width: 100%;
+}
+
+.header-scrolled{
+    background-color: white;
+    box-shadow: 0 3px 10px black;
+}
+
+/* The sidebar menu */
+.sidebar {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    right: 0;
+    background-color:#922905; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+    font-family: poppins;
+}
+  
+  /* The sidebar links */
+.sidebar a {
+    padding: 8px 32px 8px 8px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+  
+  /* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+  
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    font-size: 36px;
+    
+}
+  
+  /* The button used to open the sidebar */
+.openbtn {
+    font-family: poppins;
+    font-size: 30px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: white;
+    position: absolute;
+    top: 0%;
+    right: 2%;
+    padding: 10px 0px 0px 10px;
+    
+}
+
+.container1{
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 2%;
+    text-align: center;
+
+
+}
+
+.contactcontent{
+    font-family: poppins;
+    font-size: 1.5vw;
+    font-weight: 600;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .contactcontent{
+        font-family: poppins;
+        font-size: 2.5vw;
+        font-weight: 600;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 10%;
+        text-align: center;
+    }
+}
+
+
+
+.foter{
+    background-color: #000;
+    color: white;
+    font-family: poppins;
+    font-size: 1vw;
+    font-weight: 600;
+    text-align: center;
+}
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s; /* If you want a transition effect */
+    padding: 20px;
+}
+  
+
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+}
+
+
+.container23{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    padding-top: 50px;
+}
+
+.content23{
+    max-width: 750px;
+}
+
+.content23para{
+    font-family: poppins;
+    font-size: 1.2vw;
+    font-weight: 200;
+}
+
+.content23head{
+    font-family: poppins;
+    font-size: 1.5vw;
+    font-weight: 600;
+}
+
+.image23{
+    padding-left: 2.5%;
+}
+
+.image234{
+    width: 100%;
+    height: auto;
+    max-width:190px;
+}
+
+.titte{
+    font-family: "Poller One", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 3.5vw;
+    margin: 15%;
+    margin-top: 5%;
+    margin-bottom: 1%;
+    text-align: center;
+}
+
+.titte2{
+    font-family: poppins;
+    font-size: 1.5vw;
+    font-weight: 200;
+    text-align: center;
+    margin: 10%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+.contact-info {
+    text-align: center;
+    font-family: poppins;
+    font-weight: 200;
+    font-size: 1.5vw;
+}
+
+.contact-info p {
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: #000;
+}
+
+.address {
+    margin-top: 20px;
+}
+
+.address p {
+    margin: 5px 0;
+}
+
+.contracthead{
+    float: right;
+    padding-top: 1%;
+    
+}
+
+.contractheadimg{
+    float: right;
+    width: 100%;
+    height: auto;
+    max-width:700px;
+}
+.contractheadtext{
+    position: absolute;
+    top: 25%; 
+    left: 5%; 
+    font-family: "Poller One", serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 3.5vw;
+    padding-right: 25%;
+    text-shadow: 1px 1px #f1f1f1;
+
+}
+
+.contractheadtextenquirenow{
+    font-family: poppins;
+    font-size: 1.5vw;
+    font-weight: 200;
+    
+}
+
+.contractheadsubtext{
+    font-family: poppins;
+    font-size: 1 vw;
+    font-weight: 200;
+    margin: 2.5%;
+}
+
+.contractwhypartner{
+    font-family: "Poller One", serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 2.5vw;
+    text-align: center;
+}
+
+.contractcontainer {
+    display: flex;
+    justify-content: space-around;
+    font-family: poppins;
+}
+
+.contractcolumn {
+    flex: 1;
+    max-width: 600px;
+    width:100%
+}
+
+.contractstep{
+    padding-bottom: 10px;
+    margin: 10px;
+}
+
+.contractstep h3 {
+    font-size: 1.2em;
+
+}
+
+.contractstep p {
+    font-size: 1em;
+    line-height: 1.6;
+
+}
+
+@media (max-width: 768px) {
+    .contractcontainer {
+        flex-direction: column;
+    }
+}
+
+.contractbtmtextenquirenow{
+    font-family: poppins;
+    font-size: 1.5vw;
+    font-weight: 200;
+    text-align: center;
+}
