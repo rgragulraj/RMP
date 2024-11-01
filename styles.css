@@ -446,12 +446,18 @@ section .containter{
         justify-content: center;
         align-items: center;
         justify-items: center;
-        padding-top: 50px;
+        padding-top: 25px;
     }
 }
 
 .content23{
     max-width: 750px;
+}
+
+@media (max-width: 768px) {
+    .content23{
+        max-width: 300px;
+    }
 }
 
 .content23para{
@@ -468,6 +474,17 @@ section .containter{
 
 .image23{
     padding-left: 2.5%;
+}
+
+@media (max-width: 768px) {
+    .image23{
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+        width: 100%;
+        height: auto;
+        max-width:100px;
+
+    }
 }
 
 .image234{
