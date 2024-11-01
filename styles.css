@@ -219,7 +219,7 @@ font-style: normal;*/
 
 @media (max-width: 768px) {
     .logo {
-        width: 20%;
+        width: 15%;
     }
 }
 
@@ -357,6 +357,23 @@ section .containter{
     
 }
 
+@media (max-width: 768px) {
+    .openbtn {
+        font-family: poppins;
+        font-size: 20px;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        color: white;
+        position: absolute;
+        top: 0%;
+        right: 2%;
+        padding: 10px 0px 0px 10px;
+        
+    }
+}
+
+
 .container1{
     margin-top: 5%;
     margin-left: 5%;
@@ -420,7 +437,17 @@ section .containter{
     justify-content: center;
     align-items: center;
     justify-items: center;
-    padding-top: 50px;
+    padding-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .containter23 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        padding-top: 50px;
+    }
 }
 
 .content23{
