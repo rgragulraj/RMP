@@ -498,9 +498,8 @@ section .containter{
     .image23{
         padding-left: 2.5%;
         padding-right: 2.5%;
-        width: 100%;
-        height: auto;
-        max-width:100px;
+        width: 150px;
+    
 
     }
 }
