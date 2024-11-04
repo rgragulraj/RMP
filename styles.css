@@ -417,6 +417,18 @@ section .containter{
     text-align: center;
 }
   
+@media (max-width: 768px) {
+    .foter{
+        background-color: #000;
+        color: white;
+        font-family: poppins;
+        font-size: 2.5vw;
+        font-weight: 600;
+        text-align: center;
+    }
+      
+}
+
   /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
     transition: margin-left .5s; /* If you want a transition effect */
@@ -570,7 +582,7 @@ section .containter{
 }
 .contractheadtext{
     position: absolute;
-    top: 25%; 
+    top: 20%; 
     left: 5%; 
     font-family: "Poller One", serif;
     font-weight: 200;
@@ -581,6 +593,21 @@ section .containter{
 
 }
 
+@media (max-width: 768px) {
+    .contractheadtext{
+        position: absolute;
+        top: 10%; 
+        left: 7.5%; 
+        font-family: "Poller One", serif;
+        font-weight: 200;
+        font-style: normal;
+        font-size: 5vw;
+        padding-right: 25%;
+        text-shadow: 2px 2px #f1f1f1;
+    
+    }
+}
+
 .contractheadtextenquirenow{
     font-family: poppins;
     font-size: 1.5vw;
@@ -588,12 +615,32 @@ section .containter{
     
 }
 
+
+@media (max-width: 768px) {
+    .contractheadtextenquirenow{
+        font-family: poppins;
+        font-size: 2.5vw;
+        font-weight: 300;
+    }
+}
+
 .contractheadsubtext{
     font-family: poppins;
-    font-size: 1 vw;
+    font-size: 1vw;
     font-weight: 200;
     margin: 2.5%;
 }
+
+@media (max-width: 768px) {
+    .contractheadsubtext{
+        font-family: poppins;
+        font-size: 3vw;
+        font-weight: 50;
+        margin: 5%;
+        text-align: center;
+    }
+}
+
 
 .contractwhypartner{
     font-family: "Poller One", serif;
@@ -603,10 +650,31 @@ section .containter{
     text-align: center;
 }
 
+@media (max-width: 768px) {
+    .contractwhypartner{
+        font-family: "Poller One", serif;
+        font-weight: 250;
+        font-style: normal;
+        font-size: 5vw;
+        text-align: center;
+        padding-top: 5%;
+    }
+}
+
 .contractcontainer {
     display: flex;
     justify-content: space-around;
     font-family: poppins;
+}
+
+@media (max-width: 768px) {
+    .contractcontainer {
+        display: flex;
+        justify-content: space-around;
+        font-family: poppins;
+        text-align: center;
+    }
+    
 }
 
 .contractcolumn {
@@ -618,6 +686,13 @@ section .containter{
 .contractstep{
     padding-bottom: 10px;
     margin: 10px;
+}
+
+@media (max-width: 768px) {
+    .contractstep{
+        padding-bottom: 20px;
+        margin: 10px;
+    }
 }
 
 .contractstep h3 {
@@ -642,4 +717,14 @@ section .containter{
     font-size: 1.5vw;
     font-weight: 200;
     text-align: center;
+}
+
+@media (max-width: 768px) {
+    .contractbtmtextenquirenow{
+        font-family: poppins;
+        font-size: 2.5vw;
+        font-weight: 200;
+        text-align: center;
+    }
+    
 }
