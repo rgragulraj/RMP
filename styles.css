@@ -533,6 +533,19 @@ section .containter{
     text-align: center;
 }
 
+@media (max-width: 768px) {
+    .titte{
+        font-family: "Poller One", serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 3.5vw;
+        margin: 15%;
+        margin-top: 20%;
+        margin-bottom: 1%;
+        text-align: center;
+    }
+}
+
 .titte2{
     font-family: poppins;
     font-size: 1.5vw;
@@ -543,11 +556,32 @@ section .containter{
     margin-bottom: 0%;
 }
 
+@media (max-width: 768px) {
+    .titte2{
+        font-family: poppins;
+        font-size: 2.5vw;
+        font-weight: 200;
+        text-align: center;
+        margin: 10%;
+        margin-top: 0%;
+        margin-bottom: 0%;
+    }
+}
+
 .contact-info {
     text-align: center;
     font-family: poppins;
     font-weight: 200;
     font-size: 1.5vw;
+}
+
+@media (max-width: 768px) {
+    .contact-info {
+        text-align: center;
+        font-family: poppins;
+        font-weight: 200;
+        font-size: 3vw;
+    }
 }
 
 .contact-info p {
@@ -728,3 +762,4 @@ section .containter{
     }
     
 }
+
