@@ -722,6 +722,10 @@ section .containter{
     margin: 10px;
 }
 
+.contractstep p {
+    text-align: justify;
+}
+
 @media (max-width: 768px) {
     .contractstep{
         padding-bottom: 20px;
