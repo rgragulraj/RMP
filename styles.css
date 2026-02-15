@@ -320,6 +320,206 @@ a { color: inherit; text-decoration: none; }
   padding: 0 var(--space-lg) var(--space-lg);
 }
 
+/* Contract Farming section */
+.cf-section {
+  background: var(--color-bg);
+}
+
+.cf-hero {
+  position: relative;
+  width: 100%;
+  min-height: 70vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.cf-hero img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cf-hero-overlay {
+  position: relative;
+  z-index: 1;
+  padding: var(--space-2xl) var(--space-xl);
+  max-width: 600px;
+}
+
+.cf-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);
+  z-index: 0;
+}
+
+.cf-heading {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-weight: 400;
+  color: var(--color-white);
+  line-height: 1.2;
+  margin-bottom: var(--space-lg);
+}
+
+.cf-link {
+  color: var(--color-white);
+  border-color: rgba(255,255,255,0.8);
+}
+.cf-link:hover { opacity: 0.8; }
+.cf-link::after { content: " +"; }
+
+.cf-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  padding: var(--space-2xl) var(--space-xl);
+  align-items: start;
+}
+
+.cf-body {
+  max-width: 500px;
+}
+
+.cf-body p {
+  font-size: clamp(1rem, 1.2vw, 1.1rem);
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  margin-bottom: var(--space);
+}
+
+.cf-body .link-plus {
+  margin-top: var(--space);
+}
+
+/* Carousel */
+.cf-carousel {
+  position: relative;
+  background: none;
+  min-height: 320px;
+  overflow: hidden;
+}
+
+.cf-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  padding-bottom: 50px;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  pointer-events: none;
+}
+
+.cf-slide-active {
+  opacity: 1;
+  pointer-events: auto;
+  position: relative;
+}
+
+.cf-step-num {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 400;
+  color: var(--color-border);
+  margin-bottom: var(--space-sm);
+}
+
+.cf-slide h3 {
+  font-family: var(--font-display);
+  font-size: 1.65rem;
+  font-weight: 500;
+  color: var(--color-text);
+  margin-bottom: var(--space);
+}
+
+.cf-slide p {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  line-height: 1.75;
+}
+
+.cf-dots {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  gap: 8px;
+}
+
+.cf-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-border);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.25s, width 0.25s;
+}
+
+.cf-dot-active {
+  width: 24px;
+  border-radius: 4px;
+  background: var(--color-text);
+}
+
+@media (max-width: 768px) {
+  .cf-hero { min-height: 50vh; }
+  .cf-hero-overlay { padding: var(--space-xl) var(--space-lg); }
+  .cf-hero::after { background: linear-gradient(180deg, transparent 20%, rgba(0,0,0,0.8) 100%); }
+  .cf-content { grid-template-columns: 1fr; padding: var(--space-xl) var(--space-lg); }
+  .cf-carousel { min-height: 350px; }
+}
+
+/* Get in Touch CTA */
+.cta-section {
+  text-align: center;
+  padding: var(--space-2xl) var(--space-lg);
+  background: var(--color-text);
+}
+
+.cta-heading {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+  color: var(--color-white);
+  margin-bottom: var(--space);
+}
+
+.cta-text {
+  font-size: clamp(1rem, 1.2vw, 1.1rem);
+  color: rgba(255,255,255,0.7);
+  line-height: 1.75;
+  max-width: 500px;
+  margin: 0 auto var(--space-lg);
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 0.85rem 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: var(--color-text);
+  background: var(--color-white);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.cta-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
 .hero-title {
   font-family: var(--font-display);
   font-size: clamp(4rem, 14vw, 8rem);
