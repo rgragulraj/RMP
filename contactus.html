@@ -4,60 +4,72 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us | RMP Farms</title>
-  <link rel="icon" type="image/png" href="images/RMP LOGO.png">
+  <link rel="icon" href="images/logo.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Tinos:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="header header-scrolled">
-    <a href="index.html" aria-label="RMP Farms Home"><img src="images/RMP LOGO.png" alt="RMP Farms" class="logo" width="90" height="40"></a>
-    <button class="openbtn" onclick="toggleNav()" aria-label="Open menu">Menu</button>
+  <header class="site-header scrolled">
+    <a href="index.html"><img src="images/logo.svg" alt="RMP Farms" class="logo"></a>
+    <button class="nav-toggle" onclick="toggleNav()" aria-label="Menu">Menu</button>
   </header>
 
-  <div id="sidebarOverlay" class="sidebar-overlay" onclick="toggleNav()" aria-hidden="true"></div>
-  <nav id="mySidebar" class="sidebar" aria-label="Main navigation">
-    <button class="closebtn" onclick="toggleNav()" aria-label="Close menu">&times;</button>
-    <a href="index.html#sectionpra">Our Practice</a>
+  <div class="nav-overlay" id="navOverlay" onclick="toggleNav()"></div>
+  <nav class="nav-sidebar" id="navSidebar">
+    <button class="nav-close" onclick="toggleNav()" aria-label="Close">&times;</button>
+    <a href="index.html#practice">Our Practice</a>
     <a href="whatwedo.html">Operations</a>
     <a href="contractfarming.html">Contract Farming</a>
     <a href="contactus.html">Contact Us</a>
   </nav>
 
   <main>
-    <section style="padding-top: calc(var(--header-height) + 2rem);">
-      <h1 class="titte">Get in touch with RMP Farms</h1>
-      <p class="titte2">We'd love to hear from you! Whether you have questions about our products, services, or any other inquiries, our team is here to help. Please feel free to reach out to us through any of the following methods:</p>
-    </section>
+    <section class="section page-hero">
+      <div class="section-inner">
+        <div class="contact-hero">
+          <h1>Get in touch with RMP Farms</h1>
+          <p>We'd love to hear from you! Whether you have questions about our products, services, or any other inquiries, our team is here to help. Please feel free to reach out to us through any of the following methods:</p>
+        </div>
 
-    <section>
-      <div class="contact-info">
-        <p><strong>Email:</strong> <a href="mailto:info@rmpfarms.com">info@rmpfarms.com</a></p>
-        <p><strong>Phone:</strong> <a href="tel:+919842212279">+91 9842212279</a></p>
-        <div class="address">
-          <p><strong>Office Address:</strong></p>
-          <p>RMP Farms<br>Minnagar<br>Tiruppur<br>Tamil Nadu<br>641 662</p>
+        <div class="contact-details">
+          <p><strong>Email:</strong> <a href="mailto:info@rmpfarms.com">info@rmpfarms.com</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+919842212279">+91 9842212279</a></p>
+          <div class="address">
+            <p><strong>Office Address:</strong></p>
+            <p>RMP Farms<br>Minnagar<br>Tiruppur<br>Tamil Nadu<br>641 662</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <footer class="foter">
-      <p>RMP Farms 2024</p>
-      <p><a href="mailto:rgragulraj@gmail.com">Website By Ragul Raj</a></p>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-nav">
+          <a href="index.html#practice">Our Practice</a>
+          <a href="whatwedo.html">Operations</a>
+          <a href="contractfarming.html">Contract Farming</a>
+          <a href="contactus.html">Contact Us</a>
+        </div>
+        <div class="footer-credit">
+          <p>RMP Farms 2024</p>
+          <p><a href="mailto:rgragulraj@gmail.com">Website By Ragul Raj</a></p>
+        </div>
+      </div>
     </footer>
   </main>
 
   <script>
     function toggleNav() {
-      const sidebar = document.getElementById('mySidebar');
-      const overlay = document.getElementById('sidebarOverlay');
-      const isOpen = !sidebar.classList.contains('open');
-      sidebar.classList.toggle('open', isOpen);
-      if (overlay) overlay.classList.toggle('visible', isOpen);
-      document.body.style.overflow = isOpen ? 'hidden' : '';
+      const sidebar = document.getElementById('navSidebar');
+      const overlay = document.getElementById('navOverlay');
+      const open = !sidebar.classList.contains('open');
+      sidebar.classList.toggle('open', open);
+      overlay.classList.toggle('open', open);
+      document.body.style.overflow = open ? 'hidden' : '';
     }
-    document.querySelectorAll('.sidebar a').forEach(link => link.addEventListener('click', toggleNav));
+    document.querySelectorAll('.nav-sidebar a').forEach(a => a.addEventListener('click', toggleNav));
   </script>
 </body>
 </html>

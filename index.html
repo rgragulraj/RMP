@@ -4,118 +4,153 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RMP Farms | Heritage of Excellence Since 1964</title>
-  <link rel="icon" type="image/png" href="images/RMP LOGO.png">
-  
-  <!-- Performance: Preconnect to font origin -->
+  <link rel="icon" href="images/logo.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Single font request - Poppins + Tinos combined -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Tinos:wght@400;700&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="header header-transparent" id="header">
-    <a href="index.html" aria-label="RMP Farms Home"><img src="images/Frame 2.png" alt="RMP Farms" class="logo" width="90" height="40"></a>
-    <button class="openbtn" onclick="toggleNav()" aria-label="Open menu">Menu</button>
+  <header class="site-header transparent" id="header">
+    <a href="index.html"><img src="images/logo.svg" alt="RMP Farms" class="logo"></a>
+    <button class="nav-toggle" onclick="toggleNav()" aria-label="Menu">Menu</button>
   </header>
 
-  <div id="sidebarOverlay" class="sidebar-overlay" onclick="toggleNav()" aria-hidden="true"></div>
-  <nav id="mySidebar" class="sidebar" aria-label="Main navigation">
-    <button class="closebtn" onclick="toggleNav()" aria-label="Close menu">&times;</button>
-    <a href="index.html#sectionpra">Our Practice</a>
+  <div class="nav-overlay" id="navOverlay" onclick="toggleNav()"></div>
+  <nav class="nav-sidebar" id="navSidebar">
+    <button class="nav-close" onclick="toggleNav()" aria-label="Close">&times;</button>
+    <a href="index.html">Home</a>
     <a href="whatwedo.html">Operations</a>
     <a href="contractfarming.html">Contract Farming</a>
     <a href="contactus.html">Contact Us</a>
   </nav>
 
-  <main>
-    <section class="sec1">
-      <div class="background_video">
-        <video autoplay loop muted playsinline preload="metadata" poster="">
-          <source src="images/background_video.mp4" type="video/mp4">
-        </video>
-      </div>
-      <div>
-        <h1 class="pg1tit">RMP FARMS</h1>
-        <p class="pg1tit1">Heritage of excellence since 1964</p>
-      </div>
-    </section>
+  <!-- Fixed video background -->
+  <div class="hero-video">
+    <video autoplay loop muted playsinline preload="metadata">
+      <source src="images/background_video.mp4" type="video/mp4">
+    </video>
+  </div>
 
-    <section>
-      <div class="container">
-        <h2 class="title" id="sectionpra">Our Practice</h2>
-        <div class="content">
-          <h3>We are dedicated to upholding the highest standards of sustainability, innovation, and quality, ensuring that every step of our operations, from breeding to production, reflects our commitment to excellence and care for both our animals and the environment.</h3>
-        </div>
-      </div>
-    </section>
+  <!-- Overlay that fades to static bg color -->
+  <div class="video-fade" id="videoFade"></div>
 
-    <section>
-      <div class="container1">
-        <img src="images/Frame 3.png" alt="RMP Farms operations" class="whatwedoimg" width="1200" height="600" loading="lazy">
-      </div>
-      <div class="container2">
-        <div class="text-section">
-          <p>At RMP Farms, we take pride in offering a diverse range of premium products and services designed to meet the highest standards of quality and excellence. From our meticulously hatched broiler chicks to our carefully formulated feed, each product is crafted with precision and care.</p>
-        </div>
-        <div class="text-section">
-          <p>Discover the difference our commitment to excellence makes in every product and service we provide. Whether you're a trader looking for superior broiler hens or a farmer in need of high-quality feed, RMP Farms is your trusted partner for all your poultry needs.</p>
-          <div class="buton">
-            <a href="whatwedo.html" class="cta-button">Explore What We Offer</a>
+  <!-- Fixed text layers (crossfade on scroll) -->
+  <div class="hero-content" id="heroContent">
+    <h1 class="hero-title">RMP Farms</h1>
+    <p class="hero-subtitle">Heritage of excellence since 1964</p>
+  </div>
+
+  <div class="hero-content practice-overlay" id="practiceOverlay">
+    <span class="practice-overlay-label">Our Practice</span>
+    <p class="practice-overlay-text">We are dedicated to upholding the highest standards of sustainability, innovation, and quality, ensuring that every step of our operations, from breeding to production, reflects our commitment to excellence and care for both our animals and the environment.</p>
+  </div>
+
+  <!-- Scrollable area: spacers drive parallax, then static content -->
+  <main class="parallax-scroll">
+    <!-- Phase 1: hero text visible (1vh) -->
+    <section class="parallax-spacer"></section>
+    <!-- Phase 2: practice text visible (1vh) -->
+    <section class="parallax-spacer"></section>
+    <!-- Phase 3: video fades out during this spacer -->
+    <section class="parallax-spacer parallax-spacer-short"></section>
+  </main>
+
+  <!-- Static sections (after video fades out) -->
+  <div class="static-content">
+    <section class="section">
+      <div class="section-inner">
+        <img src="images/Frame 3.png" alt="RMP Farms operations" class="products-img" loading="lazy">
+        <div class="products-split">
+          <div>
+            <p>At RMP Farms, we take pride in offering a diverse range of premium products and services designed to meet the highest standards of quality and excellence. From our meticulously hatched broiler chicks to our carefully formulated feed, each product is crafted with precision and care.</p>
+          </div>
+          <div>
+            <p>Discover the difference our commitment to excellence makes in every product and service we provide. Whether you're a trader looking for superior broiler hens or a farmer in need of high-quality feed, RMP Farms is your trusted partner for all your poultry needs.</p>
+            <a href="whatwedo.html" class="link-plus">explore what we offer</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section>
-      <div class="contractfarm">
-        <a href="contractfarming.html"><img src="images/Frame 5.png" alt="Contract Farming" class="contractfarmimg" width="900" height="400" loading="lazy"></a>
+    <section class="section">
+      <div class="section-inner contract-banner">
+        <a href="contractfarming.html"><img src="images/Frame 5.png" alt="Contract Farming" loading="lazy"></a>
       </div>
     </section>
 
-    <section>
-      <div class="contactcontent">
+    <section class="section">
+      <div class="section-inner contact-cta">
         <p>We'd love to hear from you! Whether you have questions about our products, services, or any other inquiries, our team is here to help.</p>
-        <a href="contactus.html" class="cta-button">Contact Us</a>
+        <a href="contactus.html" class="link-plus">contact us</a>
       </div>
     </section>
 
-    <footer class="foter">
-      <p>RMP Farms 2024</p>
-      <p><a href="mailto:rgragulraj@gmail.com">Website By Ragul Raj</a></p>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="whatwedo.html">Operations</a>
+          <a href="contractfarming.html">Contract Farming</a>
+          <a href="contactus.html">Contact Us</a>
+        </div>
+        <div class="footer-credit">
+          <p>RMP Farms 2024</p>
+          <p><a href="mailto:rgragulraj@gmail.com">Website By Ragul Raj</a></p>
+        </div>
+      </div>
     </footer>
-  </main>
+  </div>
 
   <script>
     function toggleNav() {
-      const sidebar = document.getElementById('mySidebar');
-      const overlay = document.getElementById('sidebarOverlay');
-      const isOpen = !sidebar.classList.contains('open');
-      sidebar.classList.toggle('open', isOpen);
-      if (overlay) overlay.classList.toggle('visible', isOpen);
-      document.body.style.overflow = isOpen ? 'hidden' : '';
+      const sidebar = document.getElementById('navSidebar');
+      const overlay = document.getElementById('navOverlay');
+      const open = !sidebar.classList.contains('open');
+      sidebar.classList.toggle('open', open);
+      overlay.classList.toggle('open', open);
+      document.body.style.overflow = open ? 'hidden' : '';
     }
+    document.querySelectorAll('.nav-sidebar a').forEach(a => a.addEventListener('click', toggleNav));
 
-    document.querySelectorAll('.sidebar a').forEach(link => {
-      link.addEventListener('click', () => toggleNav());
-    });
-
+    const heroContent = document.getElementById('heroContent');
+    const practiceOverlay = document.getElementById('practiceOverlay');
+    const videoFade = document.getElementById('videoFade');
     const header = document.getElementById('header');
-    const hero = document.querySelector('.sec1');
-    
-    function updateHeader() {
-      if (window.scrollY > 80) {
-        header.classList.remove('header-transparent');
-        header.classList.add('header-scrolled');
-      } else {
-        header.classList.add('header-transparent');
-        header.classList.remove('header-scrolled');
+
+    function onScroll() {
+      const y = window.scrollY;
+      const vh = window.innerHeight;
+
+      // Phase 1: Hero → Practice crossfade (0 to 0.7vh)
+      const p1 = Math.min(Math.max(y / (vh * 0.7), 0), 1);
+      heroContent.style.opacity = 1 - p1;
+      heroContent.style.transform = `translate(-50%, calc(-50% - ${120 * p1}px))`;
+      practiceOverlay.style.opacity = p1;
+      practiceOverlay.style.transform = `translate(-50%, calc(-50% + ${80 * (1 - p1)}px))`;
+
+      // Phase 2: Practice stays visible (0.7vh to 1.5vh)
+      // Phase 3: Practice fades out + video fades out (1.5vh to 2.2vh)
+      const fadeStart = vh * 1.5;
+      const fadeEnd = vh * 2.2;
+      const p3 = Math.min(Math.max((y - fadeStart) / (fadeEnd - fadeStart), 0), 1);
+
+      // Fade practice text out
+      if (y > fadeStart) {
+        practiceOverlay.style.opacity = Math.max(1 - p3, 0);
       }
+
+      // Fade video out (overlay goes from transparent to solid bg color)
+      videoFade.style.opacity = p3;
+
+      // Switch header: transparent over video, scrolled over static content
+      const inStatic = p3 >= 1;
+      header.classList.toggle('transparent', !inStatic);
+      header.classList.toggle('scrolled', inStatic);
     }
-    
-    window.addEventListener('scroll', updateHeader, { passive: true });
-    updateHeader();
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
   </script>
 </body>
 </html>
