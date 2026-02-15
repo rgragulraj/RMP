@@ -247,6 +247,79 @@ a { color: inherit; text-decoration: none; }
   background: var(--color-bg);
 }
 
+/* Intro text above cards */
+.ops-intro {
+  color: var(--color-text-muted);
+  font-size: clamp(1rem, 1.2vw, 1.1rem);
+  line-height: 1.75;
+  max-width: 600px;
+  margin-bottom: var(--space-xl);
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.ops-header {
+  max-width: 600px;
+  margin: 0;
+}
+
+/* Auto-scrolling marquee cards */
+.marquee {
+  overflow: hidden;
+  padding: var(--space-lg) 0;
+}
+
+.marquee-track {
+  display: flex;
+  gap: var(--space-lg);
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.card {
+  flex: 0 0 420px;
+  background: var(--color-white);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+  transform: translateY(-4px);
+}
+
+.card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.card h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--color-text);
+  padding: var(--space-lg) var(--space-lg) var(--space-sm);
+}
+
+.card p {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  padding: 0 var(--space-lg) var(--space-lg);
+}
+
 .hero-title {
   font-family: var(--font-display);
   font-size: clamp(4rem, 14vw, 8rem);

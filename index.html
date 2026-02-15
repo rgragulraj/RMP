@@ -59,30 +59,55 @@
   <!-- Static sections (after video fades out) -->
   <div class="static-content">
     <section class="section">
-      <div class="section-inner">
-        <img src="images/Frame 3.png" alt="RMP Farms operations" class="products-img" loading="lazy">
-        <div class="products-split">
-          <div>
-            <p>At RMP Farms, we take pride in offering a diverse range of premium products and services designed to meet the highest standards of quality and excellence. From our meticulously hatched broiler chicks to our carefully formulated feed, each product is crafted with precision and care.</p>
+      
+      <span class="section-label">Operations</span>
+      <h2 class="section-title">What We Do</h2>
+      <p class="ops-intro">At RMP Farms, our dedication to excellence is evident in every aspect of our operations. From breeding top-quality broiler chicks to producing premium feed, we cover the entire spectrum of poultry farming with a focus on quality, sustainability, and innovation.</p>
+      
+      <div class="marquee">
+        <div class="marquee-track">
+          <div class="card">
+            <img src="images/chicken2.png" alt="Broiler chickens" loading="lazy">
+            <h3>Chickens</h3>
+            <p>Our broiler farming operations focus on raising healthy, high-quality chickens sold primarily to traders. We provide optimal living conditions, including spacious environments, clean water, and balanced diets, ensuring superior meat quality.</p>
           </div>
-          <div>
-            <p>Discover the difference our commitment to excellence makes in every product and service we provide. Whether you're a trader looking for superior broiler hens or a farmer in need of high-quality feed, RMP Farms is your trusted partner for all your poultry needs.</p>
-            <a href="whatwedo.html" class="link-plus">explore what we offer</a>
+          <div class="card">
+            <img src="images/egg2.png" alt="Egg production" loading="lazy">
+            <h3>Egg</h3>
+            <p>Our egg production processes ensure the best parent and broiler eggs. Our hens receive optimal nutrition and care in modern facilities, resulting in high-quality eggs. We use innovative methods to maximize egg quality and quantity.</p>
+          </div>
+          <div class="card">
+            <img src="images/chick1.png" alt="Broiler chicks" loading="lazy">
+            <h3>Chick</h3>
+            <p>Our breeding and hatching processes produce top-quality broiler chicks. We maintain a robust breeding program and state-of-the-art hatcheries to ensure healthy chicks.</p>
+          </div>
+          <div class="card">
+            <img src="images/feed2.png" alt="Poultry feed" loading="lazy">
+            <h3>Feed</h3>
+            <p>Our feed production ensures our poultry receives the best nutrition. We operate three feed mills and manage two conversion mills, producing premium feed and selling the excess to other farmers.</p>
+          </div>
+          <!-- Duplicate set for seamless loop -->
+          <div class="card">
+            <img src="images/chicken2.png" alt="Broiler chickens" loading="lazy">
+            <h3>Chickens</h3>
+            <p>Our broiler farming operations focus on raising healthy, high-quality chickens sold primarily to traders. We provide optimal living conditions, including spacious environments, clean water, and balanced diets, ensuring superior meat quality.</p>
+          </div>
+          <div class="card">
+            <img src="images/egg2.png" alt="Egg production" loading="lazy">
+            <h3>Egg</h3>
+            <p>Our egg production processes ensure the best parent and broiler eggs. Our hens receive optimal nutrition and care in modern facilities, resulting in high-quality eggs. We use innovative methods to maximize egg quality and quantity.</p>
+          </div>
+          <div class="card">
+            <img src="images/chick1.png" alt="Broiler chicks" loading="lazy">
+            <h3>Chick</h3>
+            <p>Our breeding and hatching processes produce top-quality broiler chicks. We maintain a robust breeding program and state-of-the-art hatcheries to ensure healthy chicks.</p>
+          </div>
+          <div class="card">
+            <img src="images/feed2.png" alt="Poultry feed" loading="lazy">
+            <h3>Feed</h3>
+            <p>Our feed production ensures our poultry receives the best nutrition. We operate three feed mills and manage two conversion mills, producing premium feed and selling the excess to other farmers.</p>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-inner contract-banner">
-        <a href="contractfarming.html"><img src="images/Frame 5.png" alt="Contract Farming" loading="lazy"></a>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-inner contact-cta">
-        <p>We'd love to hear from you! Whether you have questions about our products, services, or any other inquiries, our team is here to help.</p>
-        <a href="contactus.html" class="link-plus">contact us</a>
       </div>
     </section>
 
@@ -151,6 +176,12 @@
 
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
   </script>
 </body>
 </html>
