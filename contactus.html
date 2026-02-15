@@ -1,73 +1,63 @@
 <!DOCTYPE html>
-<html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="background_styles.css">
-      <link rel="stylesheet" href="styles.css">
-      <title>RMP FARMS</title>
-      <link rel="shortcut icon" type="image/ico" href="images/RMP LOGO.png">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="https://use.typekit.net/inx1zhs.css">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Poller+One&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | RMP Farms</title>
+  <link rel="icon" type="image/png" href="images/RMP LOGO.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Tinos:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header header-scrolled">
+    <a href="index.html" aria-label="RMP Farms Home"><img src="images/RMP LOGO.png" alt="RMP Farms" class="logo" width="90" height="40"></a>
+    <button class="openbtn" onclick="toggleNav()" aria-label="Open menu">Menu</button>
+  </header>
 
-      
-    </head>
-    <body>
-      <header class="header header-scrolled">
-          
-        <a href="index.html"><img src="images/RMP LOGO.png" class="logo"></a>
-        <button style="color: black;"class="openbtn" onclick="openNav()">Menu </button>  
-          
-          
-      </header>
-      <div id="mySidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        <a href="index.html#sectionpra">Our Practice</a>
-        <a href="whatwedo.html">Operations</a>
-        <a href="contractfarming.html">Contract Farming</a>
-        <a href="contactus.html">Contact Us</a>
-      </div>
+  <div id="sidebarOverlay" class="sidebar-overlay" onclick="toggleNav()" aria-hidden="true"></div>
+  <nav id="mySidebar" class="sidebar" aria-label="Main navigation">
+    <button class="closebtn" onclick="toggleNav()" aria-label="Close menu">&times;</button>
+    <a href="index.html#sectionpra">Our Practice</a>
+    <a href="whatwedo.html">Operations</a>
+    <a href="contractfarming.html">Contract Farming</a>
+    <a href="contactus.html">Contact Us</a>
+  </nav>
 
-      <section>
-        <div class="titte">
-            <h1>Get in touch with RMP Farms</h1>
+  <main>
+    <section style="padding-top: calc(var(--header-height) + 2rem);">
+      <h1 class="titte">Get in touch with RMP Farms</h1>
+      <p class="titte2">We'd love to hear from you! Whether you have questions about our products, services, or any other inquiries, our team is here to help. Please feel free to reach out to us through any of the following methods:</p>
+    </section>
+
+    <section>
+      <div class="contact-info">
+        <p><strong>Email:</strong> <a href="mailto:info@rmpfarms.com">info@rmpfarms.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+919842212279">+91 9842212279</a></p>
+        <div class="address">
+          <p><strong>Office Address:</strong></p>
+          <p>RMP Farms<br>Minnagar<br>Tiruppur<br>Tamil Nadu<br>641 662</p>
         </div>
-        <div class="titte2">
-            <p>We'd love to hear from you! Whether you have questions about our products, services, or any other inquiries, our team is here to help. Please feel free to reach out to us through any of the following methods: </p>
-        </div>
-      </section>
-      <section>
-        <div class="contact-info">
-          <p><strong>email :</strong> <a href="mailto:info@rmpfarms.com">info@rmpfarms.com</a></p>
-          <p><strong>Phone :</strong> <a href="tel:+919842212279">+91 9842212279</a></p>
-          <div class="address">
-              <p><strong>Office Address :</strong></p>
-              <p>RMP Farms<br>
-              Minnagar<br>
-              Tiruppur<br>
-              Tamil Nadu<br>
-              641 662</p>
-          </div>
       </div>
-      </section>
+    </section>
 
-      <script>
-        function openNav() {
-          document.getElementById("mySidebar").style.width = "250px";
-          document.getElementById("main").style.marginRight = "250px";
-        }
-        
-        function closeNav() {
-          document.getElementById("mySidebar").style.width = "0";
-          document.getElementById("main").style.marginRight= "0";
-        }
-      </script>
-    </body>
+    <footer class="foter">
+      <p>RMP Farms 2024</p>
+      <p><a href="mailto:rgragulraj@gmail.com">Website By Ragul Raj</a></p>
+    </footer>
+  </main>
 
+  <script>
+    function toggleNav() {
+      const sidebar = document.getElementById('mySidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+      const isOpen = !sidebar.classList.contains('open');
+      sidebar.classList.toggle('open', isOpen);
+      if (overlay) overlay.classList.toggle('visible', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    }
+    document.querySelectorAll('.sidebar a').forEach(link => link.addEventListener('click', toggleNav));
+  </script>
+</body>
 </html>

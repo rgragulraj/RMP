@@ -1,155 +1,102 @@
 <!DOCTYPE html>
-<html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="background_styles.css">
-      <link rel="stylesheet" href="styles.css">
-      <title>RMP FARMS</title>
-      <link rel="shortcut icon" type="image/ico" href="images/RMP LOGO.png">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="https://use.typekit.net/inx1zhs.css">
-      <link href="https://fonts.googleapis.com/css2?family=Poller+One&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contract Farming | RMP Farms</title>
+  <link rel="icon" type="image/png" href="images/RMP LOGO.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Tinos:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header header-scrolled">
+    <a href="index.html" aria-label="RMP Farms Home"><img src="images/RMP LOGO.png" alt="RMP Farms" class="logo" width="90" height="40"></a>
+    <button class="openbtn" onclick="toggleNav()" aria-label="Open menu">Menu</button>
+  </header>
 
-      
-    </head>
-    <body>
+  <div id="sidebarOverlay" class="sidebar-overlay" onclick="toggleNav()" aria-hidden="true"></div>
+  <nav id="mySidebar" class="sidebar" aria-label="Main navigation">
+    <button class="closebtn" onclick="toggleNav()" aria-label="Close menu">&times;</button>
+    <a href="index.html#sectionpra">Our Practice</a>
+    <a href="whatwedo.html">Operations</a>
+    <a href="contractfarming.html">Contract Farming</a>
+    <a href="contactus.html">Contact Us</a>
+  </nav>
 
-        <header class="header header-scrolled">
-          
-            <a href="index.html"><img src="images/RMP LOGO.png" class="logo"></a>
-            <button style="color: white;"class="openbtn" onclick="openNav()">Menu </button>  
-              
-              
-        </header>
-        <div id="mySidebar" class="sidebar">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-            <a href="index.html#sectionpra">Our Practice</a>
-            <a href="whatwedo.html">Operations</a>
-            <a href="contractfarming.html">Contract Farming</a>
-            <a href="contactus.html">Contact Us</a>
+  <main>
+    <section style="padding-top: var(--header-height);">
+      <div class="contracthead">
+        <img src="images/contract1.png" alt="Contract farming" class="contractheadimg" width="1200" height="400" loading="eager">
+        <div class="contractheadtext">
+          <h1>Explore the world of contract farming with us</h1>
+          <a href="contactus.html" class="cta-button">Enquire Now</a>
         </div>
+      </div>
+    </section>
 
-        <section>
-          <div class="contracthead">
-            <img src="images/contract1.png" alt="contractheadimg" class = "contractheadimg">
+    <section>
+      <div class="contractheadsubtext">
+        <p>At RMP Farms, we believe in fostering strong partnerships with local farmers through our comprehensive contract farming program. With over 800 contract farms, we provide the resources, support, and expertise necessary to ensure mutual success and the highest standards of poultry production. Discover how partnering with us can help you achieve your farming goals and contribute to a sustainable agricultural community.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="contractwhypartner">Why Partner with RMP Farms?</h2>
+    </section>
+
+    <section>
+      <div class="contractcontainer">
+        <div class="contractcolumn">
+          <div class="contractstep">
+            <h3>1. Initial Consultation</h3>
+            <p>We begin by conducting an initial consultation to understand your farming needs and goals. Our team will assess your current operations and identify areas for improvement, ensuring that we tailor our support to your specific requirements.</p>
           </div>
-        </section>
-        <section>
-          <div class="contractheadtext">
-            <h1>Explore the world of contract farming with us</h1>
-            <div class = "contractheadtextenquirenow">
-              <a href="contactus.html" class="cta-button">Enquire Now</a>
-            </div>
+          <div class="contractstep">
+            <h3>2. Agreement and Planning</h3>
+            <p>Once we have a clear understanding of your needs, we will draft a contract farming agreement that outlines the terms and conditions of our partnership. This agreement will detail the resources, support, and expectations for both parties, ensuring transparency and mutual understanding.</p>
           </div>
-        </section>
-        <section>
-
-        </section>
-
-        <section>
-          <div class = "contractheadsubtext">
-            <h2>At RMP Farms, we believe in fostering strong partnerships with local farmers through our comprehensive contract farming program. With over 800 contract farms, we provide the resources, support, and expertise necessary to ensure mutual success and the highest standards of poultry production. Discover how partnering with us can help you achieve your farming goals and contribute to a sustainable agricultural community.</h2>
+          <div class="contractstep">
+            <h3>5. Harvest and Sale</h3>
+            <p>At the end of the farming cycle, we will assist you with the harvest and sale of your produce. Our established market connections and competitive pricing ensure that you receive fair and timely payments, providing financial stability and rewarding your hard work.</p>
           </div>
-        </section>
-
-        <section>
-          <div class = "contractwhypartner">
-            <h1>Why Partner with RMP Farms ? </h1>
-            <br>
+        </div>
+        <div class="contractcolumn">
+          <div class="contractstep">
+            <h3>3. Resource Provision</h3>
+            <p>After the agreement is finalized, we will provide you with the necessary resources, including high-quality broiler chicks, premium feed, and farming equipment. Our team will also offer training and guidance on how to use these resources effectively.</p>
           </div>
-        </section>
-
-        <section>
-          <div class = "contractcontainer">
-            <div class = "contractcolumn">
-              <div class = "contractstep">
-                <h1>1. Initial Consultation</h1>
-                <p>We begin by conducting an initial consultation to understand your farming needs and goals. Our team will assess your current operations and identify areas for improvement, ensuring that we tailor our support to your specific requirements.</p>
-              </div>
-              <div class="contractstep">
-                <h1>2. Agreement and Planning</h1>
-                <p>Once we have a clear understanding of your needs, we will draft a contract farming agreement that outlines the terms and conditions of our partnership. This agreement will detail the resources, support, and expectations for both parties, ensuring transparency and mutual understanding.</p>
-              </div>
-              <div class ="contractstep">
-                <h1>5. Harvest and Sale</h1>
-                <p>At the end of the farming cycle, we will assist you with the harvest and sale of your produce. Our established market connections and competitive pricing ensure that you receive fair and timely payments, providing financial stability and rewarding your hard work.</p>
-              </div>
-            </div>
-
-            <div class = "contractcolumn">
-              <div class ="contractstep">
-                <h1>3. Resource Provision</h1>
-                <p>After the agreement is finalized, we will provide you with the necessary resources, including high-quality broiler chicks, premium feed, and farming equipment. Our team will also offer training and guidance on how to use these resources effectively.</p>
-              </div>
-              <div class = "contractstep">
-                <h1>4. Ongoing Support</h1>
-                <p>Throughout the farming cycle, our team of experts will provide ongoing support and guidance. We will conduct regular visits to monitor your progress, offer advice, and address any challenges you may encounter. Our goal is to ensure that you achieve the best possible results and maintain high standards of production.</p>
-              </div>
-            </div>
+          <div class="contractstep">
+            <h3>4. Ongoing Support</h3>
+            <p>Throughout the farming cycle, our team of experts will provide ongoing support and guidance. We will conduct regular visits to monitor your progress, offer advice, and address any challenges you may encounter.</p>
           </div>
-        </section>
+        </div>
+      </div>
+    </section>
 
-        <section>
-          <div class = "contractbtmtextenquirenow">
-            <br>
-            <a href="contactus.html" class="cta-button">Enquire Now</a>
-            <br>
-            <br>
-            <br>
-            <br>
-          </div>
-        </section>
+    <section>
+      <div class="contractbtmtextenquirenow">
+        <a href="contactus.html" class="cta-button">Enquire Now</a>
+      </div>
+    </section>
 
-        <section>
-          <div class = "foter ">
-            <br>
-            <p>RMP Farms 2024</p>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            
-            <a href="mailto:rgragulraj@gmail.com"><p>Website By Ragul Raj</p></a>
-            <br>
-          </div>
-        </section>
-        
-        <script type="text/javascript">
-            window.addEventListener('scroll',reveal);
-    
-            function reveal(){
-              var reveals = document.querySelectorAll('.reveal');
-    
-              for(var i = 0; i < reveals.length; i++){
-                var windowheight = window.innerHeight;
-                var revealtop = reveals[i].getBoundingClientRect().top;
-                var revealpoint = 150;
-    
-                if(revealtop < windowheight - revealpoint){
-                  reveals[i].classList.add('active');
-                }
-              }
-            }
-        </script>
-      
-          
-        <script>
-            function openNav() {
-              document.getElementById("mySidebar").style.width = "250px";
-              document.getElementById("main").style.marginRight = "250px";
-            }
-            
-            function closeNav() {
-              document.getElementById("mySidebar").style.width = "0";
-              document.getElementById("main").style.marginRight= "0";
-            }
-        </script>
-    
-    </body>
+    <footer class="foter">
+      <p>RMP Farms 2024</p>
+      <p><a href="mailto:rgragulraj@gmail.com">Website By Ragul Raj</a></p>
+    </footer>
+  </main>
+
+  <script>
+    function toggleNav() {
+      const sidebar = document.getElementById('mySidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+      const isOpen = !sidebar.classList.contains('open');
+      sidebar.classList.toggle('open', isOpen);
+      if (overlay) overlay.classList.toggle('visible', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    }
+    document.querySelectorAll('.sidebar a').forEach(link => link.addEventListener('click', toggleNav));
+  </script>
+</body>
 </html>

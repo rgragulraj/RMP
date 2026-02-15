@@ -1,158 +1,111 @@
 <!DOCTYPE html>
-<html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="background_styles.css">
-      <link rel="stylesheet" href="styles.css">
-      <title>RMP FARMS</title>
-      <link rel="shortcut icon" type="image/ico" href="images/RMP LOGO.png">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="https://use.typekit.net/inx1zhs.css">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operations | RMP Farms</title>
+  <link rel="icon" type="image/png" href="images/RMP LOGO.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Tinos:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header header-scrolled">
+    <a href="index.html" aria-label="RMP Farms Home"><img src="images/RMP LOGO.png" alt="RMP Farms" class="logo" width="90" height="40"></a>
+    <button class="openbtn" onclick="toggleNav()" aria-label="Open menu">Menu</button>
+  </header>
 
-      
-    </head>
-    <body>
-      <header class="header header-scrolled">
-          
-        <a href="index.html"><img src="images/RMP LOGO.png" class="logo"></a>
-        <button style="color: black;" class="openbtn" onclick="openNav()">Menu </button>  
-          
-          
-      </header>
-      <div id="mySidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        <a href="index.html#sectionpra">Our Practice</a>
-        <a href="whatwedo.html">Operations</a>
-        <a href="contractfarming.html">Contract Farming</a>
-        <a href="contactus.html">Contact Us</a>
+  <div id="sidebarOverlay" class="sidebar-overlay" onclick="toggleNav()" aria-hidden="true"></div>
+  <nav id="mySidebar" class="sidebar" aria-label="Main navigation">
+    <button class="closebtn" onclick="toggleNav()" aria-label="Close menu">&times;</button>
+    <a href="index.html#sectionpra">Our Practice</a>
+    <a href="whatwedo.html">Operations</a>
+    <a href="contractfarming.html">Contract Farming</a>
+    <a href="contactus.html">Contact Us</a>
+  </nav>
+
+  <main>
+    <section style="padding-top: calc(var(--header-height) + 2rem);">
+      <div class="container23 reveal">
+        <div class="content23">
+          <h1 class="content23head">What We Do</h1>
+          <p class="content23para">At RMP Farms, our dedication to excellence is evident in every aspect of our operations. From breeding top-quality broiler chicks to producing premium feed, we cover the entire spectrum of poultry farming with a focus on quality, sustainability, and innovation.</p>
+        </div>
+        <div class="image23">
+          <img src="images/chiicken1.png" alt="Poultry farming" class="image234" width="190" height="190" loading="lazy">
+        </div>
       </div>
 
-      <section>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div class="container23">
-          <div class="content23">
-            <div class = "content23head">
-              <h1>What We Do</h1>
-            </div>
-            <div class="content23para">          
-              <p>At RMP Farms, our dedication to excellence is evident in every aspect of our operations. From breeding top-quality broiler chicks to producing premium feed, we cover the entire spectrum of poultry farming with a focus on quality, sustainability, and innovation.
-              </p>
-            </div>
-          </div>  
-          <div class="image23">
-            <img src="images/chiicken1.png" class="image234">
-          </div>
+      <div class="container23 reveal">
+        <div class="content23">
+          <h1 class="content23head">Chickens</h1>
+          <p class="content23para">Our broiler farming operations focus on raising healthy, high-quality chickens sold primarily to traders. We provide optimal living conditions, including spacious environments, clean water, and balanced diets, ensuring superior meat quality. We adhere to strict animal welfare standards, minimizing stress and promoting natural behaviors.</p>
         </div>
-        <div class="container23">
-          <div class="content23">
-            <div class = "content23head">
-              <h1>Chickens</h1>
-            </div>
-            <div class="content23para">          
-              <p>Our broiler farming operations focus on raising healthy, high-quality chickens sold primarily to traders. We provide optimal living conditions, including spacious environments, clean water, and balanced diets, ensuring superior meat quality. We adhere to strict animal welfare standards, minimizing stress and promoting natural behaviors. Advanced farming techniques and regular health checks ensure our chickens meet the highest industry standards for quality and safety.</p>
-            </div>
-          </div>  
-          <div class="image23">
-              
-            <img src="images/chicken2.png" class="image234">
-          </div>
+        <div class="image23">
+          <img src="images/chicken2.png" alt="Broiler chickens" class="image234" width="190" height="190" loading="lazy">
         </div>
+      </div>
 
-        <div class="container23">
-          <div class="content23">
-            <div class = "content23head">
-              <h1>Egg</h1>
-            </div>
-            <div class="content23para">          
-              <p>Our egg production processes ensure the best parent and broiler eggs. Our hens receive optimal nutrition and care in modern facilities, resulting in high-quality eggs. We use innovative methods to maximize egg quality and quantity, including precision feeding and environmental controls. Each egg undergoes rigorous quality checks before being used for hatching or sold to customers.</p>
-            </div>
-          </div>  
-          <div class="image23">
-              
-            <img src="images/egg2.png" class="image234">
-          </div>
+      <div class="container23 reveal">
+        <div class="content23">
+          <h1 class="content23head">Egg</h1>
+          <p class="content23para">Our egg production processes ensure the best parent and broiler eggs. Our hens receive optimal nutrition and care in modern facilities, resulting in high-quality eggs. We use innovative methods to maximize egg quality and quantity, including precision feeding and environmental controls.</p>
         </div>
-
-        <div class="container23">
-          <div class="content23">
-            <div class = "content23head">
-              <h1>Chick</h1>
-            </div>
-            <div class="content23para">          
-              <p>Our breeding and hatching processes produce top-quality broiler chicks. We maintain a robust breeding program and state-of-the-art hatcheries to ensure healthy chicks. High-quality parent hens and precise incubation conditions result in strong, healthy chicks. From day one, our chicks receive optimal nutrition and a safe, clean environment, promoting healthy growth and development.</p>
-            </div>
-          </div>  
-          <div class="image23">
-              
-            <img src="images/chick1.png" class="image234" >
-          </div>
+        <div class="image23">
+          <img src="images/egg2.png" alt="Egg production" class="image234" width="190" height="190" loading="lazy">
         </div>
+      </div>
 
-        <div class="container23">
-          <div class="content23">
-            <div class = "content23head">
-              <h1>Feed</h1>
-            </div>
-            <div class="content23para">          
-              <p>Our feed production ensures our poultry receives the best nutrition. We operate three feed mills and manage two conversion mills, producing premium feed and selling the excess to other farmers. Our feed is formulated for optimal poultry health and growth, using high-quality ingredients and precise formulations. We use environmentally friendly methods in our feed production processes, minimizing waste and reducing our environmental footprint.</p>
-            </div>
-          </div>  
-          <div class="image23">
-              
-            <img src="images/feed2.png" class="image234">
-          </div>
+      <div class="container23 reveal">
+        <div class="content23">
+          <h1 class="content23head">Chick</h1>
+          <p class="content23para">Our breeding and hatching processes produce top-quality broiler chicks. We maintain a robust breeding program and state-of-the-art hatcheries to ensure healthy chicks. High-quality parent hens and precise incubation conditions result in strong, healthy chicks.</p>
         </div>
-      </section>
-
-      <section>
-        <div class = "contactcontent">
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <p>We'd love to hear from you! Whether you have questions about our products, services, or any other inquiries, our team is here to help.</p>
-          <a href="contactus.html" class="cta-button">Contact Us</a>
+        <div class="image23">
+          <img src="images/chick1.png" alt="Broiler chicks" class="image234" width="190" height="190" loading="lazy">
         </div>
-      </section>
+      </div>
 
-      <section>
-        <div class = "foter ">
-          <br>
-          <p>RMP Farms 2024</p>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          
-          <a href="mailto:rgragulraj@gmail.com"><p>Website By Ragul Raj</p></a>
-          <br>
+      <div class="container23 reveal">
+        <div class="content23">
+          <h1 class="content23head">Feed</h1>
+          <p class="content23para">Our feed production ensures our poultry receives the best nutrition. We operate three feed mills and manage two conversion mills, producing premium feed and selling the excess to other farmers. Our feed is formulated for optimal poultry health and growth.</p>
         </div>
-      </section>
+        <div class="image23">
+          <img src="images/feed2.png" alt="Poultry feed" class="image234" width="190" height="190" loading="lazy">
+        </div>
+      </div>
+    </section>
 
+    <section>
+      <div class="contactcontent">
+        <p>We'd love to hear from you! Whether you have questions about our products, services, or any other inquiries, our team is here to help.</p>
+        <a href="contactus.html" class="cta-button">Contact Us</a>
+      </div>
+    </section>
 
+    <footer class="foter">
+      <p>RMP Farms 2024</p>
+      <p><a href="mailto:rgragulraj@gmail.com">Website By Ragul Raj</a></p>
+    </footer>
+  </main>
 
-      <script>
-        function openNav() {
-          document.getElementById("mySidebar").style.width = "250px";
-          document.getElementById("main").style.marginRight = "250px";
-        }
-        
-        function closeNav() {
-          document.getElementById("mySidebar").style.width = "0";
-          document.getElementById("main").style.marginRight= "0";
-        }
-      </script>
-    </body>
+  <script>
+    function toggleNav() {
+      const sidebar = document.getElementById('mySidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+      const isOpen = !sidebar.classList.contains('open');
+      sidebar.classList.toggle('open', isOpen);
+      if (overlay) overlay.classList.toggle('visible', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    }
+    document.querySelectorAll('.sidebar a').forEach(link => link.addEventListener('click', toggleNav));
 
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
 </html>
