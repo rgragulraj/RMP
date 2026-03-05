@@ -86,8 +86,11 @@
       <h2 class="section-title">What We Do</h2>
       <p class="ops-intro">At RMP Farms, our dedication to excellence is evident in every aspect of our operations. From breeding top-quality broiler chicks to producing premium feed, we cover the entire spectrum of poultry farming with a focus on quality, sustainability, and innovation.</p>
       
-      <div class="marquee">
-        <div class="marquee-track">
+      <div class="marquee-wrap">
+        <button type="button" class="marquee-arrow marquee-arrow-prev" aria-label="Previous card" title="Previous card"></button>
+        <button type="button" class="marquee-arrow marquee-arrow-next" aria-label="Next card" title="Next card"></button>
+        <div class="marquee">
+          <div class="marquee-track" id="marqueeTrack">
           <div class="card">
             <img src="images/chicken2.png" alt="Broiler chickens" loading="lazy">
             <h3>Chickens</h3>
@@ -129,6 +132,7 @@
             <h3>Feed</h3>
             <p>Our feed production ensures our poultry receives the best nutrition. We operate three feed mills and manage two conversion mills, producing premium feed and selling the excess to other farmers.</p>
           </div>
+        </div>
         </div>
       </div>
     </section>
@@ -215,6 +219,50 @@
       document.body.style.overflow = open ? 'hidden' : '';
     }
     document.querySelectorAll('.nav-sidebar a').forEach(a => a.addEventListener('click', toggleNav));
+
+    // Mobile cards carousel (one card at a time, auto-advance + arrows)
+    const marqueeTrack = document.getElementById('marqueeTrack');
+    const CAROUSEL_CARDS = 4;
+    const AUTO_ADVANCE_MS = 4500;
+    let cardIndex = 0;
+    let carouselInterval = null;
+
+    function isMobileMarquee() {
+      return window.matchMedia('(max-width: 768px)').matches;
+    }
+    function setCardIndex(i) {
+      if (!marqueeTrack || !isMobileMarquee()) return;
+      cardIndex = ((i % CAROUSEL_CARDS) + CAROUSEL_CARDS) % CAROUSEL_CARDS;
+      marqueeTrack.style.transform = `translateX(-${cardIndex * 25}%)`;
+    }
+    function startCarousel() {
+      if (!isMobileMarquee()) return;
+      if (carouselInterval) clearInterval(carouselInterval);
+      carouselInterval = setInterval(() => setCardIndex(cardIndex + 1), AUTO_ADVANCE_MS);
+    }
+    function stopCarousel() {
+      if (carouselInterval) {
+        clearInterval(carouselInterval);
+        carouselInterval = null;
+      }
+    }
+    function onResizeMarquee() {
+      if (isMobileMarquee()) {
+        setCardIndex(cardIndex);
+        startCarousel();
+      } else {
+        stopCarousel();
+        if (marqueeTrack) marqueeTrack.style.transform = '';
+      }
+    }
+    if (marqueeTrack) {
+      const prevBtn = document.querySelector('.marquee-arrow-prev');
+      const nextBtn = document.querySelector('.marquee-arrow-next');
+      if (prevBtn) prevBtn.addEventListener('click', () => { setCardIndex(cardIndex - 1); startCarousel(); });
+      if (nextBtn) nextBtn.addEventListener('click', () => { setCardIndex(cardIndex + 1); startCarousel(); });
+      window.addEventListener('resize', onResizeMarquee);
+      onResizeMarquee();
+    }
 
     const heroContent = document.getElementById('heroContent');
     const practiceOverlay = document.getElementById('practiceOverlay');

@@ -247,6 +247,28 @@ a { color: inherit; text-decoration: none; }
   background: var(--color-bg);
 }
 
+/* Mobile: comfortable side padding in static section (after video fades) */
+@media (max-width: 768px) {
+  .static-content .section,
+  .static-content .cta-section {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  .static-content .section {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+  .static-content .cta-section {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+  .static-content .cf-content,
+  .static-content .cf-hero-overlay {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
 /* Intro text above cards */
 .ops-intro {
   color: var(--color-text-muted);
@@ -318,6 +340,98 @@ a { color: inherit; text-decoration: none; }
   color: var(--color-text-muted);
   line-height: 1.7;
   padding: 0 var(--space-lg) var(--space-lg);
+}
+
+/* Marquee arrows – visible only on mobile, translucent */
+.marquee-wrap {
+  position: relative;
+}
+.marquee-arrow {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  opacity: 0.9;
+}
+.marquee-arrow:hover {
+  opacity: 1;
+}
+.marquee-arrow:active {
+  opacity: 0.8;
+}
+.marquee-arrow::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 10px;
+  height: 10px;
+  border-style: solid;
+  border-color: rgba(10, 10, 10, 0.7);
+}
+.marquee-arrow-prev {
+  left: 0.5rem;
+}
+.marquee-arrow-prev::after {
+  border-width: 2px 0 0 2px;
+  transform: rotate(-45deg);
+  margin-left: 6px;
+}
+.marquee-arrow-next {
+  right: 0.5rem;
+}
+.marquee-arrow-next::after {
+  border-width: 2px 0 0 2px;
+  transform: rotate(135deg);
+  margin-right: 6px;
+}
+
+/* Mobile: card carousel (one card at a time, no scroll) + arrows */
+@media (max-width: 768px) {
+  .marquee-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .marquee-wrap {
+    padding: 0 0.5rem;
+  }
+  .marquee {
+    overflow: hidden;
+  }
+  .marquee-track {
+    animation: none;
+    width: 400%;
+    display: flex;
+    gap: 0;
+    transition: transform 0.4s ease;
+    will-change: transform;
+  }
+  .marquee-track .card {
+    flex: 0 0 25%;
+    box-sizing: border-box;
+  }
+  .marquee-track .card:nth-child(n+5) {
+    display: none;
+  }
+  .card img {
+    height: 200px;
+  }
+  .card h3 {
+    font-size: 1.2rem;
+    padding: var(--space) var(--space) var(--space-sm);
+  }
+  .card p {
+    font-size: 0.95rem;
+    padding: 0 var(--space) var(--space);
+  }
 }
 
 /* Contract Farming section */
